@@ -13,6 +13,7 @@
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* border-radius: 6px; */
@@ -64,13 +65,17 @@
   cursor: pointer;
 }
 
+.closeWrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+
 .close {
-  position: relative;
-  top: -260px;
-  right: 55px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(228, 228, 228, 0.74);
   cursor: pointer;
+  /* position: relative; */
 }
 
 .closeText {

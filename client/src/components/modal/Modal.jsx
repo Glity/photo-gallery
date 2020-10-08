@@ -4,14 +4,14 @@ import classes from './style/Modal.module.css';
 
 const Modal = (props) => {
   return (
-    <div
-    className={classes.bgModal}>
-           <div className={classes.close}>
-        <span onClick={props.toggleModal} className={classes.closeText}>
-          Close
-        </span>
-        <i className="fas fa-times" />
-      </div>
+    <div className={classes.bgModal}>
+        <div className={classes.close}>
+          <span onClick={props.toggleModal} className={classes.closeText}>
+            Close
+          </span>
+          <i className="fas fa-times" />
+        </div>
+        jdjdskjdsk
       <Main currentImage={props.currentImage} next={props.next} prev={props.prev} data={props.data} toggleModal={props.toggleModal}
       imageList={props.imageList}
       />

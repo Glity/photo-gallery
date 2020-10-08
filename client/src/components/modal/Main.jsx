@@ -9,6 +9,14 @@ const Main = (props) => {
   const { currentImage, next, prev } = props;
   return (
     <div className={classes.bgMain}>
+      <div className={classes.closeWrapper}>
+       <div className={classes.close}>
+        <span onClick={props.toggleModal} className={classes.closeText}>
+          Close
+        </span>
+        <i className="fas fa-times" />
+      </div>
+      </div>
       <div className={classes.modalWrapper}>
         <div className={classes.leftPanel}>
           <div className={classes.imageContainer}>
@@ -22,12 +30,6 @@ const Main = (props) => {
           <ChevronPrev prev={prev} />
         </div>
         <SideBar imageList={props.imageList} />
-      </div>
-      <div className={classes.close}>
-        <span onClick={props.toggleModal} className={classes.closeText}>
-          Close
-        </span>
-        <i className="fas fa-times" />
       </div>
     </div>
   );
