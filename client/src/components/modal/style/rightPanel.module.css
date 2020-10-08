@@ -1,0 +1,14 @@
+.headerText {
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+.link {
+  font-family: 'Open Sans';
+  color: #0073bb;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

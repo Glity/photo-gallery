@@ -21,7 +21,7 @@ const Main = (props) => {
           <ChevronNext next={next} />
           <ChevronPrev prev={prev} />
         </div>
-        <SideBar />
+        <SideBar imageList={props.imageList} />
       </div>
       <div className={classes.close}>
         <span onClick={props.toggleModal} className={classes.closeText}>

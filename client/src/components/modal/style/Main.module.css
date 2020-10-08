@@ -15,18 +15,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border-radius: 6px; */
 }
 
 .modalWrapper {
   border-radius: 6px;
-  width: 85%;
-  height: 85vh;
+  width: 60%;
+  height: 60vh;
   display: flex;
 }
 
 .leftPanel {
   width: 75%;
   height: 100%;
+  border-radius: 6px;
 }
 
 .imageContainer {
@@ -35,12 +37,15 @@
   background: #000000;
   display: flex;
   justify-content: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .image {
     height: 100%;
-    max-width: 100%;
     max-height: 100%;
+    max-width: 75%;
+    object-fit: cover;
 }
 
 .right {
@@ -72,7 +77,7 @@
   margin-right: 5px;
 }
 
-@media (min-width:) {
+/* @media (min-width: ) {
   .close {
     position: relative;
     top: -240px;
@@ -81,4 +86,4 @@
     color: rgb(228, 228, 228);
     cursor: pointer;
   }
-}
+} */

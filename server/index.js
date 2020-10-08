@@ -23,10 +23,11 @@ const getAllPhotos = function(callback) {
 
 const getPhotoById = (id, callback) => {
   model.photo.find({photoId: id }, (err, data) => {
-    if(err) {
+    if (err) {
       throw err;
     }
     else {
+      console.log(data);
       callback(data);
     }
   })

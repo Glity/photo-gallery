@@ -20,8 +20,7 @@ const seedPhotos = () => {
 
   const result = [];
 
-  for(let i = 0; i < 100; i++) {
-
+  for (let i = 0; i < 100; i += 1) {
     const dataItem = {};
     dataItem.photoId = i;
 
@@ -32,7 +31,7 @@ const seedPhotos = () => {
     dataItem.userList = [];
 
     // push 15 pictures into image list
-    for(let k = 0; k < 15; k++) {
+    for (let k = 0; k < 15; k += 1) {
       let randNum = Math.floor(Math.random() * 36);
       let randHelpful = Math.floor(Math.random() * 500);
       let randNotHelpful = Math.floor(Math.random() * 500);
@@ -47,6 +46,7 @@ const seedPhotos = () => {
     };
 
     const photoModel = new db.photo(dataItem);
+    console.log(`id: ${i}`, photoModel);
     const savedData = photoModel.save();
     result.push(savedData);
   }

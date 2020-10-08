@@ -1,0 +1,12 @@
+.photoWrapper {
+  width: 45%;
+  border-radius: 4px;
+}
+.photoWrapper:hover {
+
+}
+
+.photo {
+  width: 100%;
+  border-radius: 4px;
+}
