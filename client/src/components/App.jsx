@@ -129,6 +129,7 @@ class App extends React.Component {
           showModal
             ? (
               <Modal
+                setPic={this.setCurrentPic}
                 data={data}
                 next={this.incrementModalImage}
                 prev={this.decrementModalImage}

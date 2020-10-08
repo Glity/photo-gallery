@@ -11,8 +11,12 @@ const Modal = (props) => {
           </span>
           <i className="fas fa-times" />
         </div>
-        jdjdskjdsk
-      <Main currentImage={props.currentImage} next={props.next} prev={props.prev} data={props.data} toggleModal={props.toggleModal}
+      <Main
+      setPic={props.setPic}
+      currentImage={props.currentImage}
+      next={props.next}
+      prev={props.prev}
+      data={props.data} toggleModal={props.toggleModal}
       imageList={props.imageList}
       />
     </div>

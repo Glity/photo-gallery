@@ -29,7 +29,10 @@ const Main = (props) => {
           <ChevronNext next={next} />
           <ChevronPrev prev={prev} />
         </div>
-        <SideBar imageList={props.imageList} />
+        <SideBar
+        setPic={props.setPic}
+        imageList={props.imageList}
+        />
       </div>
     </div>
   );

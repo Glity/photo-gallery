@@ -8,7 +8,7 @@ const SideBar = (props) => {
   return (
     <div className={classes.container}>
       <SideHeader />
-      <SideList imageList={props.imageList} />
+      <SideList setPic={props.setPic} imageList={props.imageList} />
     </div>
   );
 };

@@ -8,7 +8,7 @@ const SideList = (props) => {
   return (
     <ul className={classes.sideListContainer}>
       {props.imageList.map((photoUrl, key) => {
-        return <SidePhoto key={key} photoUrl={photoUrl} />
+        return <SidePhoto setPic={props.setPic} key={key} photoUrl={photoUrl} />
       })}
     </ul>
 );
