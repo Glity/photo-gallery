@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const model = require('../db');
-
+const PORT = 3001;
 const app = express();
 
 app.use(express.json());
@@ -23,10 +23,11 @@ const getAllPhotos = function(callback) {
 
 const getPhotoById = (id, callback) => {
   model.photo.find({photoId: id }, (err, data) => {
-    if(err) {
+    if (err) {
       throw err;
     }
     else {
+      console.log(data);
       callback(data);
     }
   })
@@ -44,6 +45,6 @@ app.get('/photos/:id', (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log('listening on PORT: 3003');
+app.listen(PORT, () => {
+  console.log(`listening on PORT: ${PORT}`);
 });

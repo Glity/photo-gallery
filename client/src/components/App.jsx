@@ -30,9 +30,10 @@ class App extends React.Component {
   }
 
   getPhotos() {
-    fetch('/photos/1')
+    fetch('/photos/4')
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         this.setState({
           data: data[0],
           pageBanner: data[0].imageList.slice(0,4),
@@ -84,6 +85,7 @@ class App extends React.Component {
       };
     });
   }
+
   toggleModalPic(evt) {
     evt.persist()
     // if (evt.target.localname === 'image') {
@@ -107,6 +109,7 @@ class App extends React.Component {
 
   render() {
     const { pageBanner, data, currentImage, showModal } = this.state;
+
     return (
       <div>
       <div>
@@ -126,11 +129,13 @@ class App extends React.Component {
           showModal
             ? (
               <Modal
+                setPic={this.setCurrentPic}
                 data={data}
                 next={this.incrementModalImage}
                 prev={this.decrementModalImage}
                 className={classes.modal}
                 currentImage={currentImage}
+                imageList={this.state.imageList}
                 toggleModal={this.toggleModal}
               />
             )
